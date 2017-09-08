@@ -231,7 +231,7 @@ if (flag_divide == 0){
 
 int main(void)
 {
-	  SystemCoreClockUpdate();
+-	  SystemCoreClockUpdate();
 		SysTick_Config(SystemCoreClock/1000);//1 ms
 	  //SysTick_lib();
 		//SysTick_Config(SystemCoreClock/1000);//1 ms
@@ -382,6 +382,7 @@ flag_reiteration = 0;
 				PrintStr("/");
 				flag_divide = 1;
 				count_divide ++;
+				if (count_divide == 2 && oper == '/'){ count_divide --;}
 				if (flag_act)
 			{	
 				act_without_print(oper);                      //_----------------------TUT!
